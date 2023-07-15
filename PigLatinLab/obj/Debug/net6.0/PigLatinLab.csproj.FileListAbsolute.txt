@@ -1,0 +1,15 @@
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.csproj.AssemblyReference.cache
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.AssemblyInfoInputs.cache
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.AssemblyInfo.cs
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.csproj.CoreCompileInputs.cache
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\bin\Debug\net6.0\PigLatinLab.exe
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\bin\Debug\net6.0\PigLatinLab.deps.json
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\bin\Debug\net6.0\PigLatinLab.runtimeconfig.json
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\bin\Debug\net6.0\PigLatinLab.dll
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\bin\Debug\net6.0\PigLatinLab.pdb
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.dll
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\refint\PigLatinLab.dll
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.pdb
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\PigLatinLab.genruntimeconfig.cache
+C:\Users\shane\Desktop\Random Code\PigLatinLab\PigLatinLab\obj\Debug\net6.0\ref\PigLatinLab.dll
