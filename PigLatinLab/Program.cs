@@ -3,9 +3,6 @@ using System.Runtime.ExceptionServices;
 using System.Text.RegularExpressions;
 
 Console.WriteLine("Welcome to the Pig Latin Translator!");
-
-
-
 bool runProgram = true;
 while (runProgram)
 {
@@ -128,7 +125,7 @@ static string Consonant(string input)
             return translation;
         }
     }
-    return "";
+    return input + "ay";
 }
 
 
