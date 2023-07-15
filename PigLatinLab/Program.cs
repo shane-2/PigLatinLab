@@ -59,26 +59,36 @@ static void PigLatin()
 {
     //ask for word
     Console.WriteLine("Please enter a word.");
-    // make lower case                             
     string input1 = Console.ReadLine();
-    string input = input1.ToLower();
-    string[] splitWords = input.Split(' ').ToArray();
-    foreach (string struggling in splitWords)
+    bool containsNumber =input1.Any(char.IsDigit);
+    if (containsNumber == false)
+    {
+        // make lower case                             
+        string input = input1.ToLower();
+        string[] splitWords = input.Split(' ').ToArray();
+        foreach (string struggling in splitWords)
 
 
 
-        //for (int i = 0; i < (input.Length); i++)    
-        if (VowelFirst(struggling) == true)           //(input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
-        {
-            //if it starts with a vowel add way onto the ending,
-            Console.WriteLine($"{(struggling)}way");
-        }
-        else
-        {
-            //two substrings to build the word ------- result = second half of word + first half + ay ( get those halfs with substrings)
-            Console.WriteLine($"{Consonant(struggling)}");
-        }
-
+            //for (int i = 0; i < (input.Length); i++)    
+            if (VowelFirst(struggling) == true)           //(input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
+            {
+                string s = Regex.Replace(struggling, @"[^A-Za-z]", string.Empty);
+                //if it starts with a vowel add way onto the ending,
+                Console.WriteLine($"{(s)}way");
+            }
+            else
+            {
+                string s = Regex.Replace(struggling, @"[^A-Za-z]", string.Empty);
+                //two substrings to build the word ------- result = second half of word + first half + ay ( get those halfs with substrings)
+                Console.WriteLine($"{Consonant(s)}");
+            }
+    }    
+    else
+    {
+        Console.WriteLine(input1);
+        Console.WriteLine("No numbers please.");
+    }
 }
 
 static string Punctuation(string input) 
