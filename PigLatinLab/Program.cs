@@ -31,27 +31,7 @@ while (runProgram)
 }
    
 
-
-//////////////////     Methods    --------------
-//static string Puncuation(string input)
-//{
-//    if (input.EndsWith().IsPunctuation() == true)
-//    if (x == ".")
-//        return '.';
-//}
-
-
-//static string RemovePunctuation(string input) 
-//{
-//    string result = "";
-//    foreach(char c in input)
-//    {
-//        if (!Regex.IsMatch(c.ToString(),@"[.,\/#!$%\^&\*;:{}=\-_~()@?]"))
-//    }
-//    return "";
-//}
-
-
+//////////////////     Methods    -------------------------------------------------------------------------------
 static void PigLatin()
 {
     //ask for word
@@ -64,20 +44,15 @@ static void PigLatin()
         string input = input1.ToLower();
         string[] splitWords = input.Split(' ').ToArray();
         foreach (string struggling in splitWords)
-
-
-
-            //for (int i = 0; i < (input.Length); i++)    
-            if (VowelFirst(struggling) == true)           //(input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
-            {
-                string s = Regex.Replace(struggling, @"[^A-Za-z]", string.Empty);
-                //if it starts with a vowel add way onto the ending,
+               
+            if (VowelFirst(struggling) == true)           
+            {                   //Vowel
+                string s = Regex.Replace(struggling, @"[^A-Za-z]", string.Empty);                ,
                 Console.WriteLine($"{(s)}way");
             }
-            else
-            {
-                string s = Regex.Replace(struggling, @"[^A-Za-z]", string.Empty);
-                //two substrings to build the word ------- result = second half of word + first half + ay ( get those halfs with substrings)
+            else 
+            {               //Consonant
+                string s = Regex.Replace(struggling, @"[^A-Za-z]", string.Empty);               
                 Console.WriteLine($"{Consonant(s)}");
             }
     }    
@@ -87,7 +62,42 @@ static void PigLatin()
         Console.WriteLine("No numbers please.");
     }
 }
+//----------------------------------------------------------------------------------------------------------------
+static string Consonant(string input)
+{
 
+   
+
+    for (int i = 0; i < (input.Length); i++)
+    {
+        if (input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
+        {
+            //call back the letters from the array 
+            string half1 = input.Substring(0, i);
+            string half2 = input.Substring(i, input.Length - i);
+            string translation = half2 + half1 + "ay";
+            return translation;
+        }
+    }
+    return input + "ay";
+}
+    //-----------------------------------------------------------------------------------------------------------
+static bool VowelFirst(string input)
+{
+    string vowel = input.Substring(0, 1);
+    if (input[0] == 'a' || input[0] == 'e' || input[0] == 'i' || input[0] == 'o' || input[0] == 'u')
+    {
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+
+//Failed attempt to bring punctuation back to where it was pulled from
 static string Punctuation(string input) 
 {
     foreach(char c in input)
@@ -109,52 +119,22 @@ static string Punctuation(string input)
 }
 
 
-static string Consonant(string input)
-{
-
-   
-
-    for (int i = 0; i < (input.Length); i++)
-    {
-        if (input[i] == 'a' || input[i] == 'e' || input[i] == 'i' || input[i] == 'o' || input[i] == 'u')
-        {
-            //call back the letters from the array 
-            string half1 = input.Substring(0, i);
-            string half2 = input.Substring(i, input.Length - i);
-            string translation = half2 + half1 + "ay";
-            return translation;
-        }
-    }
-    return input + "ay";
-}
+//--------------------------------------------------------------------
+//Left over code that I didn't want to delete
+//static string Puncuation(string input)
+//{
+//    if (input.EndsWith().IsPunctuation() == true)
+//    if (x == ".")
+//        return '.';
+//}
 
 
-    
-static bool VowelFirst(string input)
-{
-    string vowel = input.Substring(0, 1);
-    if (input[0] == 'a' || input[0] == 'e' || input[0] == 'i' || input[0] == 'o' || input[0] == 'u')
-    {
-        return true;
-    }
-    else 
-    {
-        return false;
-    }
-}
-
-
-
-
-
-//4 bonus points
-//1. keep the case of the word whether is all UPPERCASE, lower case, or Title Case
-//2. allow punctation in the input string.
-//3. translate words with contractions ------ can't =an'tcay
-//4. dont translate words that have numbers or symbols. Example --- 189 = 189 
-                           //4. continued hello@GrandCircus.com = hello@GrandCircus.com
-//
-//
-//use a for each and a split together for extra credit for each ------(string word in Sentence.Split("")){
-//}                                                                         use word instead of input variable
-
+//static string RemovePunctuation(string input) 
+//{
+//    string result = "";
+//    foreach(char c in input)
+//    {
+//        if (!Regex.IsMatch(c.ToString(),@"[.,\/#!$%\^&\*;:{}=\-_~()@?]"))
+//    }
+//    return "";
+//}
